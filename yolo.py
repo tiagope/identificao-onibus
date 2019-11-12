@@ -30,7 +30,7 @@ np.random.seed(42)
 COLORS = np.random.randint(0, 255, size=(len(LABELS), 3),
 	dtype="uint8")
 
-# caminhos para o YOLO weights e configuração do modelo
+# caminhos para o weights e configuração do modelo
 weightsPath = os.path.sep.join([args["yolo"], "yolov3.weights"])
 configPath = os.path.sep.join([args["yolo"], "yolov3.cfg"])
 
@@ -76,7 +76,7 @@ for output in layerOutputs:
 
 		# filtra as predições fracas.
 		# probabilidade deve ser maior que o mínimo desejado
-		if confidence > args["confidence"] and classID == 5:			
+		if confidence > args["confidence"]:			
 		#if confidence > args["confidence"] :
 			# scale the bounding box coordinates back relative to the
 			# size of the image, keeping in mind that YOLO actually

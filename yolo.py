@@ -21,7 +21,6 @@ ap.add_argument("-t", "--threshold", type=float, default=0.3,
 args = vars(ap.parse_args())
 
 # Carregando as tags do modelo YOLO treinado
-#labelsPath = os.path.sep.join([args["yolo"], "coco.names"])
 labelsPath = os.path.sep.join([args["yolo"], "obj.names"])
 LABELS = open(labelsPath).read().strip().split("\n")
 
